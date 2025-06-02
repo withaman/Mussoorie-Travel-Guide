@@ -1,0 +1,734 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins',sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* -----Navbar Page Start Here------ */
+/* Header Layout*/
+.navbar{
+    display: flex;
+    aspect-ratio: 20px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo{
+    color: #000;
+}
+.logo h2{
+    font-family: Arial;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.logo h2 a{
+    color: #000;
+}
+.menu ul{
+    display:flex;
+    align-items:center;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 5px 12px;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+.menu ul li a:hover{
+    border-bottom: 4px solid #000;
+    transition: 0.4s;
+}
+.signup a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #000;
+    border-radius: 25px;
+    padding: 12px 30px;
+}
+.signup a:hover{
+    background-color: rgb(47, 47, 47);
+    transition: 0.6s;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Hide menu on small screens */
+  }
+  .menu-toggle {
+    display: block; /* Show menu toggle on small screens */
+  }
+}
+
+/* Media query for toggling menu on click */
+
+.menu-toggle {
+  display: none; /* Hide by default */
+  cursor: pointer; /* Indicate clickable element */
+}
+
+.menu-toggle i {
+  font-size: 24px; /* Adjust icon size as needed */
+  color: #000;
+}
+/* Body Layout */
+.body{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+.body-image img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    color: #fff;
+
+}
+.heading h1{
+    font-family: Arial;
+    font-size: 4rem;
+}
+.heading p{
+    font-family:sans-serif;
+    font-size: 1.2rem;
+    margin-top: -20px;
+    margin-bottom: 10px;
+
+}
+.Explore-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: darkorange;
+    padding: 12px 30px;
+    border-radius: 50px
+}
+.Explore-button:hover{
+    background-color: dimgrey;
+    transition: 0.3s;
+}
+.destinations{
+    font-size: 2.2rem;
+    font-family: sans-serif;
+    margin:40px 80px;
+    text-align: center;
+}
+.destination h2{
+    margin-bottom: 40px;
+}
+.destinations-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.destinations-item img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.destinations-item h3{
+    font-size: 1.6rem;
+    text-align: center;
+}
+.destinations-item p{
+    font-family:sans-serif;
+    font-size: 1.0rem;
+}
+/*About Us Layout*/
+.about-us{
+    font-size: 2.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background: #343434;
+}
+.about-us h2{
+    padding-top: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.about{
+    margin: 50px 10%;
+}
+.about p{
+    font-family:sans-serif;
+    font-size: 1.2rem;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.basic-info{
+    font-size: 2.2rem;
+    font-family: sans-serif;
+    margin:40px 80px;
+    text-align: center;
+}
+.basic-info h2{
+    margin-bottom: 40px;
+}
+.info-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.info-item img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+@media only screen and (max-width: 768px) {
+    .destinations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .destinations-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .basic-info .info-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .basic-info .info-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+/* Footer Layout */
+footer {
+    background: #343434;
+    padding-top: 50px;
+    color: #fff;
+  }
+  
+  .container1 {
+    width: 100%; /* Allow full width */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    justify-content: space-between; /* Distribute content horizontally */
+  }
+  
+  .footer-content {
+    width: calc(33.33% - 30px); /* Account for margins */
+    margin: 10px;
+    text-align: center; /* Center content by default */
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-content p {
+    width: 100%; /* Allow full width for text */
+    margin: auto;
+    padding: 7px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list {
+    padding: 0;
+  }
+  
+  .list li {
+    width: auto;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+  }
+  
+  .list li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .list li::before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: 0.5s;
+  }
+  
+  .list li:hover::before {
+    width: 70px;
+  }
+  
+  .social-icon {
+    padding: 0;
+  }
+  
+  .social-icon li {
+    display: inline-block;
+    padding: 5px;
+  }
+  
+  .social-icon i {
+    color: white;
+    font-size: 25px;
+  }
+  
+  a:hover {
+    color: #f18930;
+  }
+  
+  .social-icon i:hover {
+    color: #f18930;
+  }
+  
+  .bottom-bar {
+    background: #f18930;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  
+  .bottom-bar p {
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    .footer-content {
+      width: 100%; /* Make each content section full width */
+    }
+  }
+  
+/*End of Home Page*/
+
+/*Destinations Page*/
+/*------------destination page--------------*/
+.gallery h2 {
+    text-align: center;
+    font-size: clamp(2rem, 50px, 3rem);
+    margin-top: 30px;
+  }
+  
+.gallery-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+.gallery-card{
+    width: 250px;
+    height: 400px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+.gallery-card:hover{
+    transform: translateY(-20px);
+
+}
+.gallery-card img{
+    height: auto;
+    width: 250px;
+    object-fit: cover;
+}
+.gallery-contant{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.gallery-contant h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.gallery-contant p{
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.gallery-button{
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+@media (max-width: 768px) {
+    .gallery-container {
+      gap: 20px; /* Adjust gap for smaller screens */
+    }
+  }
+  @media (max-width: 10px) {
+    .gallery-container {
+      gap: 10px; /* Adjust gap for smaller screens */
+    }
+  }
+
+/* -------Destination Page End-------- */
+
+/* ----- About Page Starts here------ */
+.about-heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+
+}
+.about-heading h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+.about-heading h1::after{
+    content:"";
+    position: absolute;
+    width:100%;
+    height: 4px;
+    display: block;
+    margin:0 auto;
+    background-color: #4caf50;
+}
+.about-heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+.about-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.about-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.aboutpage-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.aboutpage-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.aboutpage-image:hover img{
+    transform: scale(1.2);
+}
+.about-content{
+    flex: 1;
+}
+.about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+.about-content .read-more{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+    color: #fff;
+    
+}
+.about-content .read-more:hover{
+    background-color: #3e8e41;
+}
+/* ----- About Page Ends Here------ */
+
+/* -------Contact Page Start Here-------- */
+.contact{
+    position: relative;
+    min-height: 100px;
+    padding: 103px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://rare-gallery.com/uploads/posts/5420592-architecture-building-black-and-white-minimalistic-concrete-residential-singapore-png-images.jpg);
+    background-size: cover;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h1{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.contact .content p{
+    font-weight: 300;
+    color: #fff;
+
+}
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.contact-container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contact-container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.contact-container .contactInfo .box .contact-text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contact-container .contactInfo .box .contact-text h2{
+        font-weight: 500;
+        color: #00bcd4;
+
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactForm h1{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input , .contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span, 
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span, 
+.contactForm .inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .contact-container .contactInfo,
+    .contactForm{
+        width: 100%;
+    }
+
+}
+/* -------Contact Page Ends Here-------- */
+
+/* ------Sign-Up Page Start Here------- */
+.navbar-signup{
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+    background: #0f0c29;
+    color: #fff;
+    justify-content: center;
+}
+.logo-signup h2{
+    margin-top: 20px;
+    color: #ffffff;
+    justify-content: left;
+    font-family: Arial;
+}
+.main-body{
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    padding-top: 2%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    font-family: 'Jost', sans-serif;
+}
+.main{
+    width: 350px;
+    height: 500px;
+    background: red;
+    overflow: hidden;
+    background: url(https://png.pngtree.com/thumb_back/fw800/background/20231005/pngtree-enchanting-nighttime-forest-summer-camp-in-majestic-mountain-surroundings-image_13569265.png) no-repeat center / cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+}
+#chk{
+    display: none;
+}
+.sign-up{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+label{
+    color: #fff;
+    font-size: 2.0rem;
+    font-family:sans-serif; 
+    justify-content: center;
+    margin: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+input{
+    width: 60%;
+    height: 50px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #573b8a;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+button:hover{
+    background: #6d44b8;
+}
+.login{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8% ease-in-out;
+    text-align: center;  
+}
+.login label{
+    color: #573b8a;
+    transform: scale(.6);
+}
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+#chk:checked ~ .sign-up label{
+    transform: scale(.6);
+}
+/* -------Sign-Up Page Start Here------- */
